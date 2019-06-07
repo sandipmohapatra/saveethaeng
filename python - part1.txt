@@ -1,0 +1,1225 @@
+Python 
+------------
+
+Python is a general purpose, dynamic, high level and interpreted programming language. It supports Object Oriented programming approach to develop applications. It is simple and easy to learn and provides lots of high-level data structures.
+
+Python is easy to learn yet powerful and versatile scripting language which makes it attractive for Application Development.
+
+Python's syntax and dynamic typing with its interpreted nature, makes it an ideal language for scripting and rapid application development.
+
+Python supports multiple programming pattern, including object oriented, imperative and functional or procedural programming styles.
+
+Python is not intended to work on special area such as web programming. That is why it is known as multipurpose because it can be used with web, enterprise, 3D CAD etc.
+
+We don't need to use data types to declare variable because it is dynamically typed so we can write a=10 to assign an integer value in an integer variable.
+
+Python makes the development and debugging fast because there is no compilation step included in python development and edit-test-debug cycle is very fast.
+
+ data types
+-----------------
+1)int
+2)float
+3)complex
+4)bool
+5)str
+6)bytes
+7)bytearray
+8)range
+9)list
+10)tuple
+11)set
+12)frozenset
+13)dict
+14)None
+
+1)int :-123,23
+decimal
+binary
+octal
+hexadecimal
+
+2)float :- 65.63,64.70
+1.2e3 (exponcial)
+
+3)complex :- a+bj
+a is real and b is imaginary part
+
+example:- 10+20j
+10.5+23.4j
+
+4)bool :- True  or False
+True=1
+False=0
+
+True+True=2
+True+False=1
+print(True/True)=1.0
+
+5)str: string type (sequence of char)
+
+we can use single quotes,double quotes,triple quotes
+
+There is no char in python
+
+
+
+
+-------------------------------------
+example-1
+
+print('welcome to python programming at infosys')
+
+--------------------------------------------
+example-2
+
+num1 = int(input("enter the number?"))  
+num2 = int(input("enter the number?"))  
+sum=num1+num2
+print(sum)
+
+-----------------------------------
+
+example -3
+
+num = int(input("enter the number?"))  
+if num%2 == 0:  
+    print("Number is even")
+
+---------------------------------------------------------------
+example -4
+
+a = int(input("Enter a? "));  
+b = int(input("Enter b? "));  
+c = int(input("Enter c? "));  
+if a>b and a>c:  
+    print("a is largest");  
+if b>a and b>c:  
+    print("b is largest");  
+if c>a and c>b:  
+    print("c is largest");  
+-----------------------------------------------------------------------
+example-5
+
+age = int (input("Enter your age? "))  
+if age>=18:  
+    print("You are eligible to vote !!");  
+else:  
+    print("Sorry! you have to wait !!");  
+
+------------------------------------------------------------------------
+example-6
+
+num = int(input("enter the number?"))  
+if num%2 == 0:  
+    print("Number is even...")  
+else:  
+    print("Number is odd...") 
+------------------------------------------------------------
+example-7
+
+number = int(input("Enter the number?"))  
+if number==10:  
+    print("number is equals to 10")  
+elif number==50:  
+    print("number is equal to 50");  
+elif number==100:  
+    print("number is equal to 100");  
+else:  
+    print("number is not equal to 10, 50 or 100");  
+----------------------------------------------------------------------------------
+example -8
+
+marks = int(input("Enter the marks? "))  
+if marks > 85 and marks <= 100:  
+   print("Congrats ! you scored grade A ...")  
+elif marks > 60 and marks <= 85:  
+   print("You scored grade B + ...")  
+elif marks > 40 and marks <= 60:  
+   print("You scored grade B ...")  
+elif (marks > 30 and marks <= 40):  
+   print("You scored grade C ...")  
+else:  
+   print("Sorry you are fail ?")  
+--------------------------------------------------
+#w.a.p ro enter name,regno ,3 subject marks,find sum,avg,grade
+
+name=str(input('enter your name'))
+regno=int(input('enter regno'))
+phy=int(input('enter phy marks'))
+chem=int(input('enter chem marks'))
+math=int(input('enter math marks'))
+tot=phy+chem+math;
+print('the total marks is ',tot);
+avg=tot/3;
+print('the avg marks is ',avg);
+
+
+-----------------------------------------------------------------------
+example-9
+
+i=1;  
+num = int(input("Enter a number:"));  
+for i in range(1,11):  
+    print("%d X %d = %d"%(num,i,num*i));  
+
+------------------------------------------
+example-10
+
+n = int(input("Enter the number of rows you want to print?"))  
+i,j=0,0  
+for i in range(0,n):  
+    print()  
+    for j in range(0,i+1):  
+        print("*",end="")  
+--------------------------------------------
+example-11
+# Python program to check if the input number is prime or not
+# num = 407
+# take input from the user
+num = int(input("Enter a number: "))
+# prime numbers are greater than 1
+if num > 1:
+   # check for factors
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           print(i,"times",num//i,"is",num)
+           break
+   else:
+       print(num,"is a prime number")
+       
+# if input number is less than
+# or equal to 1, it is not prime
+else:
+   print(num,"is not a prime number")
+-------------------
+# Python Program to find the factors of a number
+
+# define a function
+def print_factors(x):
+   # This function takes a number and prints the factors
+
+   print("The factors of",x,"are:")
+   for i in range(1, x + 1):
+       if x % i == 0:
+           print(i)
+
+# change this value for a different result.
+num = 320
+
+# uncomment the following line to take input from the user
+#num = int(input("Enter a number: "))
+
+print_factors(num)
+-----------------------------------------
+# Python Program to find the factorial of a number
+
+# define a function
+
+def print_factors(x):
+ fact = 1  
+ for i in range(1, x+1):
+    fact = fact * i 
+ return fact
+
+
+num = int(input("Enter a number: "))
+
+print("The factorial of",print_factors(num))
+
+
+--------------------------------------------
+example-12
+
+i=1;  
+while i<=10:  
+    print(i);  
+    i=i+1;  
+----------------------------------------------------------
+example-13
+
+i=1  
+number=0  
+b=9  
+number = int(input("Enter the number?"))  
+while i<=10:  
+    print("%d X %d = %d \n"%(number,i,number*i));  
+    i = i+1;  
+---------------------------------------------------------------
+example -14
+
+i=1;  
+while i<=5:  
+    print(i)  
+    i=i+1;  
+else:print("The while loop exhausted");  
+------------------------------------------------------------------
+example-15
+
+i=1;  
+while i<=5:  
+    print(i)  
+    i=i+1;  
+    if(i==3):  
+        break;  
+else:print("The while loop exhausted");  
+-------------------------
+Number Data Type in Python
+
+We can use the type() function to know which class a variable or a value belongs to and isinstance() function to check if it belongs to a particular class.
+
+a = 5
+
+# Output: <class 'int'>
+print(type(a))
+
+# Output: <class 'float'>
+print(type(5.0))
+
+# Output: (8+3j)
+c = 5 + 3j
+print(c + 3)
+
+# Output: True
+print(isinstance(c, complex))
+---------------------------------------------------
+String example
+---------------------------------------
+# all of the following are equivalent
+my_string = 'Hello'
+print(my_string)
+
+my_string = "Hello"
+print(my_string)
+
+my_string = '''Hello'''
+print(my_string)
+
+# triple quotes string can extend multiple lines
+my_string = """Hello, welcome to
+           the world of Python"""
+print(my_string)
+-------------------------------------------------
+slice
+
+str = 'programiz'
+print('str = ', str)
+
+#first character
+print('str[0] = ', str[0])
+
+#last character
+print('str[-1] = ', str[-1])
+
+#slicing 2nd to 5th character
+print('str[1:5] = ', str[1:5])
+
+#slicing 6th to 2nd last character
+print('str[5:-2] = ', str[5:-2])
+--------------------------------------------------------
+The * operator can be used to repeat the string for a given number of times.
+str1 = 'Hello'
+str2 ='World!'
+
+# using +
+print('str1 + str2 = ', str1 + str2)
+
+# using *
+print('str1 * 3 =', str1 * 3)
+------------------------------------------------------------
+
+--------------------------------------------------------------
+List
+We can use the index operator [] to access an item in a list. Index starts from 0. So, a list having 5 elements will have index from 0 to 4.
+--------------------------------
+my_list = ['p','r','o','b','e']
+# Output: p
+print(my_list[0])
+
+# Output: o
+print(my_list[2])
+
+# Output: e
+print(my_list[4])
+
+# Error! Only integer can be used for indexing
+# my_list[4.0]
+
+# Nested List
+n_list = ["Happy", [2,0,1,5]]
+
+# Nested indexing
+
+# Output: a
+print(n_list[0][1])    
+
+# Output: 5
+print(n_list[1][3])
+
+-----------------------
+my_list = ['p','r','o','b','e']
+
+# Output: e
+print(my_list[-1])
+
+# Output: p
+print(my_list[-5])
+---------------------------------------------------
+slice of list
+
+my_list = ['p','r','o','g','r','a','m','i','z']
+# elements 3rd to 5th
+print(my_list[2:5])
+
+# elements beginning to 4th
+print(my_list[:-5])
+
+# elements 6th to end
+print(my_list[5:])
+
+# elements beginning to end
+print(my_list[:])
+--------------------------
+We can use assignment operator (=) to change an item or a range of items.
+
+# mistake values
+odd = [2, 4, 6, 8]
+
+# change the 1st item    
+odd[0] = 1            
+
+# Output: [1, 4, 6, 8]
+print(odd)
+
+# change 2nd to 4th items
+odd[1:4] = [3, 5, 7]  
+
+# Output: [1, 3, 5, 7]
+print(odd)                   
+
+-----------------------------------------------------------
+We can add one item to a list using append() method or add several items using extend() method.
+odd = [1, 3, 5]
+
+odd.append(7)
+
+# Output: [1, 3, 5, 7]
+print(odd)
+
+odd.extend([9, 11, 13])
+
+# Output: [1, 3, 5, 7, 9, 11, 13]
+print(odd)
+
+-------------------------
+We can also use + operator to combine two lists. This is also called concatenation.
+
+The * operator repeats a list for the given number of times.
+
+odd = [1, 3, 5]
+
+# Output: [1, 3, 5, 9, 7, 5]
+print(odd + [9, 7, 5])
+
+#Output: ["re", "re", "re"]
+print(["re"] * 3)
+---------------------------------------
+Furthermore, we can insert one item at a desired location by using the method insert() or insert multiple items by squeezing it into an empty slice of a list.
+
+odd = [1, 9]
+odd.insert(1,3)
+
+# Output: [1, 3, 9] 
+print(odd)
+
+odd[2:2] = [5, 7]
+
+# Output: [1, 3, 5, 7, 9]
+print(odd)
+-------------------------------------------
+We can delete one or more items from a list using the keyword del. It can even delete the list entirely.
+
+my_list = ['p','r','o','b','l','e','m']
+
+# delete one item
+del my_list[2]
+
+# Output: ['p', 'r', 'b', 'l', 'e', 'm']     
+print(my_list)
+
+# delete multiple items
+del my_list[1:5]  
+
+# Output: ['p', 'm']
+print(my_list)
+
+# delete entire list
+del my_list       
+
+# Error: List not defined
+print(my_list)
+
+----------------------------------
+We can use remove() method to remove the given item or pop() method to remove an item at the given index.
+
+The pop() method removes and returns the last item if index is not provided. This helps us implement lists as stacks (first in, last out data structure).
+
+We can also use the clear() method to empty a list.
+
+my_list = ['p','r','o','b','l','e','m']
+my_list.remove('p')
+
+# Output: ['r', 'o', 'b', 'l', 'e', 'm']
+print(my_list)
+
+# Output: 'o'
+print(my_list.pop(1))
+
+# Output: ['r', 'b', 'l', 'e', 'm']
+print(my_list)
+
+# Output: 'm'
+print(my_list.pop())
+
+# Output: ['r', 'b', 'l', 'e']
+print(my_list)
+
+my_list.clear()
+
+# Output: []
+print(my_list)
+----------------------------------------------------------
+Python List Methods
+append() - Add an element to the end of the list
+extend() - Add all elements of a list to the another list
+insert() - Insert an item at the defined index
+remove() - Removes an item from the list
+pop() - Removes and returns an element at the given index
+clear() - Removes all items from the list
+index() - Returns the index of the first matched item
+count() - Returns the count of number of items passed as an argument
+sort() - Sort items in a list in ascending order
+reverse() - Reverse the order of items in the list
+copy() - Returns a shallow copy of the list
+
+------------
+my_list = [3, 8, 1, 6, 0, 8, 4]
+
+# Output: 1
+print(my_list.index(8))
+
+# Output: 2
+print(my_list.count(8))
+
+my_list.sort()
+
+# Output: [0, 1, 3, 4, 6, 8, 8]
+print(my_list)
+
+my_list.reverse()
+
+# Output: [8, 8, 6, 4, 3, 1, 0]
+print(my_list)
+-----------------------------------------------
+my_list = ['p','r','o','b','l','e','m']
+
+# Output: True
+print('p' in my_list)
+
+# Output: False
+print('a' in my_list)
+
+# Output: True
+print('c' not in my_list)
+-------------------------------------
+Creating a Tuple
+A tuple is created by placing all the items (elements) inside parentheses (), separated by commas. The parentheses are optional, however, it is a good practice to use them.
+
+A tuple can have any number of items and they may be of different types (integer, float, list, string, etc.).
+
+# Empty tuple
+my_tuple = ()
+print(my_tuple)  # Output: ()
+
+# Tuple having integers
+my_tuple = (1, 2, 3)
+print(my_tuple)  # Output: (1, 2, 3) 
+
+# tuple with mixed datatypes
+my_tuple = (1, "Hello", 3.4)
+print(my_tuple)  # Output: (1, "Hello", 3.4)  
+
+# nested tuple
+my_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+
+# Output: ("mouse", [8, 4, 6], (1, 2, 3)) 
+print(my_tuple)
+-------------------------------------------------------------
+A tuple can also be created without using parentheses. This is known as tuple packing.
+
+my_tuple = 3, 4.6, "dog"
+print(my_tuple)   # Output: 3, 4.6, "dog" 
+
+# tuple unpacking is also possible
+a, b, c = my_tuple
+
+print(a)      # 3
+print(b)      # 4.6 
+print(c)      # dog 
+------------------------------------------------------
+Having one element within parentheses is not enough. We will need a trailing comma to indicate that it is, in fact, a tuple.
+
+my_tuple = ("hello")
+print(type(my_tuple))  # <class 'str'>
+
+# Creating a tuple having one element
+my_tuple = ("hello",)  
+print(type(my_tuple))  # <class 'tuple'> 
+
+# Parentheses is optional
+my_tuple = "hello",
+print(type(my_tuple))  # <class 'tuple'> 
+
+----------------------------------------
+# Program to illustrate
+# the use of user-defined functions
+
+def add_numbers(x,y):
+   sum = x + y
+   return sum
+
+num1 = 5
+num2 = 6
+
+print("The sum is", add_numbers(num1, num2))
+
+-----------------------------------------
+# Program make a simple calculator that can add, subtract, multiply and divide using functions
+
+# This function adds two numbers 
+def add(x, y):
+   return x + y
+
+# This function subtracts two numbers 
+def subtract(x, y):
+   return x - y
+
+# This function multiplies two numbers
+def multiply(x, y):
+   return x * y
+
+# This function divides two numbers
+def divide(x, y):
+   return x / y
+
+print("Select operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+
+# Take input from the user 
+choice = input("Enter choice(1/2/3/4):")
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+if choice == '1':
+   print(num1,"+",num2,"=", add(num1,num2))
+
+elif choice == '2':
+   print(num1,"-",num2,"=", subtract(num1,num2))
+
+elif choice == '3':
+   print(num1,"*",num2,"=", multiply(num1,num2))
+
+elif choice == '4':
+   print(num1,"/",num2,"=", divide(num1,num2))
+else:
+   print("Invalid input")
+
+----------------------------------------------------------------
+Key points to remember:
+difference between List and Tuple
+----------------------------------------------------------------------------------
+The literal syntax of tuples is shown by parentheses () whereas the literal syntax of lists is shown by square brackets [] .
+Lists has variable length, tuple has fixed length.
+List has mutable nature, tuple has immutable nature.
+List has more functionality than the tuple.
+-------------------------------------------------
+What is a set in Python?
+A set is an unordered collection of items. Every element is unique (no duplicates) and must be immutable (which cannot be changed).
+
+However, the set itself is mutable. We can add or remove items from it.
+
+Sets can be used to perform mathematical set operations like union, intersection.
+
+A set is created by placing all the items (elements) inside curly braces {}, separated by comma or by using the built-in function set().
+
+It can have any number of items and they may be of different types (integer, float, tuple, string etc.). But a set cannot have a mutable element, like list, set or dictionary, as its element.
+
+example-1
+
+# set of integers
+my_set = {1, 2, 3}
+print(my_set)
+
+# set of mixed datatypes
+my_set = {1.0, "Hello", (1, 2, 3)}
+print(my_set)
+
+o/p:-
+{1, 2, 3}
+{1.0, 'Hello', (1, 2, 3)}
+-----------------------------------------
+example 2
+
+# set do not have duplicates
+# Output: {1, 2, 3, 4}
+my_set = {1,2,3,4,3,2}
+print(my_set)
+
+# set cannot have mutable items
+# here [3, 4] is a mutable list
+# If you uncomment line #12,
+# this will cause an error.
+# TypeError: unhashable type: 'list'
+
+#my_set = {1, 2, [3, 4]}
+
+# we can make set from a list
+# Output: {1, 2, 3}
+my_set = set([1,2,3,2])
+print(my_set)
+
+o/p:-
+{1, 2, 3, 4}
+{1, 2, 3}
+--------------------------------
+example-3
+
+# initialize a with {}
+a = {}
+
+# check data type of a
+# Output: <class 'dict'>
+print(type(a))
+
+# initialize a with set()
+a = set()
+
+# check data type of a
+# Output: <class 'set'>
+print(type(a))
+
+o/p:-
+<class 'dict'>
+<class 'set'>
+---------------------------------------------------------
+Sets are mutable. But since they are unordered, indexing have no meaning.
+
+We cannot access or change an element of set using indexing or slicing. Set does not support it.
+
+We can add single element using the add() method and multiple elements using the update() method. The update() method can take tuples, lists, strings or other sets as its argument. In all cases, duplicates are avoided.
+
+# initialize my_set
+my_set = {1,3}
+print(my_set)
+
+# if you uncomment line 9,
+# you will get an error
+# TypeError: 'set' object does not support indexing
+
+#my_set[0]
+
+# add an element
+# Output: {1, 2, 3}
+my_set.add(2)
+print(my_set)
+
+# add multiple elements
+# Output: {1, 2, 3, 4}
+my_set.update([2,3,4])
+print(my_set)
+
+# add list and set
+# Output: {1, 2, 3, 4, 5, 6, 8}
+my_set.update([4,5], {1,6,8})
+print(my_set)
+
+o/p:-
+{1, 3}
+{1, 2, 3}
+{1, 2, 3, 4}
+{1, 2, 3, 4, 5, 6, 8}
+
+---------------------------------------------------
+A particular item can be removed from set using methods, discard() and remove().
+
+The only difference between the two is that, while using discard() if the item does not exist in the set, it remains unchanged. But remove() will raise an error in such condition.
+
+# initialize my_set
+my_set = {1, 3, 4, 5, 6}
+print(my_set)
+
+# discard an element
+# Output: {1, 3, 5, 6}
+my_set.discard(4)
+print(my_set)
+
+# remove an element
+# Output: {1, 3, 5}
+my_set.remove(6)
+print(my_set)
+
+# discard an element
+# not present in my_set
+# Output: {1, 3, 5}
+my_set.discard(2)
+print(my_set)
+
+# remove an element
+# not present in my_set
+# If you uncomment line 27,
+# you will get an error.
+# Output: KeyError: 2
+
+o/p:-
+{1, 3, 4, 5, 6}
+{1, 3, 5, 6}
+{1, 3, 5}
+{1, 3, 5}
+--------------------------------------------
+Similarly, we can remove and return an item using the pop() method.
+
+We can also remove all items from a set using clear().
+
+# initialize my_set
+# Output: set of unique elements
+my_set = set("HelloWorld")
+print(my_set)
+
+# pop an element
+# Output: random element
+print(my_set.pop())
+
+# pop another element
+# Output: random element
+my_set.pop()
+print(my_set)
+
+# clear my_set
+#Output: set()
+my_set.clear()
+print(my_set)
+
+o/p:-
+{'e', 'W', 'o', 'r', 'H', 'l', 'd'}
+e
+{'o', 'r', 'H', 'l', 'd'}
+set()
+------------------------------------------------------------------------
+Python Set Operations
+-------------------------------------------------------------------------
+Sets can be used to carry out mathematical set operations like union, intersection, difference . We can do this with operators or methods.
+
+Let us consider the following two sets for the following operations.
+
+>>> A = {1, 2, 3, 4, 5}
+>>> B = {4, 5, 6, 7, 8}
+Union of A and B is a set of all elements from both sets.
+
+Union is performed using | operator. Same can be accomplished using the method union().
+
+# initialize A and B
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7, 8}
+
+print(A | B)
+
+# use | operator
+# Output: {1, 2, 3, 4, 5, 6, 7, 8}
+-------------------------------------------------------------------
+Intersection of A and B is a set of elements that are common in both sets.
+
+Intersection is performed using & operator. Same can be accomplished using the method intersection().
+
+# initialize A and B
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7, 8}
+
+
+print(A & B)
+
+
+# use & operator
+# Output: {4, 5}
+------------------------------------------------------------
+Difference of A and B (A - B) is a set of elements that are only in A but not in B. Similarly, B - A is a set of element in B but not in A.
+
+Difference is performed using - operator. Same can be accomplished using the method difference().
+
+# initialize A and B
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7, 8}
+
+print(A - B)
+
+# use - operator on A
+# Output: {1, 2, 3}
+----------------------------------------------
+Symmetric Difference of A and B is a set of elements in both A and B except those that are common in both.
+
+Symmetric difference is performed using ^ operator. Same can be accomplished using the method symmetric_difference().
+
+# initialize A and B
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7, 8}
+
+print(A ^ B)
+
+# use ^ operator
+# Output: {1, 2, 3, 6, 7, 8}
+---------------------------------------------------------------
+operation of set
+----------------------------
+Set remove()
+Set add()
+Set copy()
+Set clear()
+Set difference()
+Set difference_update()
+Set discard()
+Set intersection()
+Set intersection_update()
+Set isdisjoint()
+Set issubset()
+-------------------------------------------
+Method		Description
+------------------------------------------------
+add()		Adds an element to the set
+clear()		Removes all elements from the set
+copy()		Returns a copy of the set
+difference()	Returns the difference of two or more sets as a 			new set
+difference_update()	Removes all elements of another set from this 			set
+discard()		Removes an element from the set if it is a 				member. 
+intersection()	Returns the intersection of two sets as a new 				set
+intersection_update()	Updates the set with the intersection of itself 				and another
+isdisjoint()		Returns True if two sets have a null 				intersection
+issubset()		Returns True if another set contains this set
+issuperset()	Returns True if this set contains another set
+pop()		Removes and returns an arbitary set element. 				Raise KeyError if the set is empty
+remove()		Removes an element from the set. If the 				element is not a member, raise a KeyError
+symmetric_difference()	Returns the symmetric difference 					of two sets as a new set
+symmetric_difference_update()	Updates a set with the symmetric 					difference of itself and another
+union()		Returns the union of sets in a new set
+update()		Updates the set with the union of itself and 				others
+-------------------------------------------------------------
+1)add()
+
+# set of vowels
+vowels = {'a', 'e', 'i', 'u'}
+
+# adding 'o'
+vowels.add('o')
+print('Vowels are:', vowels)
+
+# adding 'a' again
+vowels.add('a')
+print('Vowels are:', vowels)
+
+o/p:-
+Vowels are: {'o', 'i', 'e', 'a', 'u'}
+Vowels are: {'o', 'i', 'e', 'a', 'u'}
+
+--------------------------------------------------------------
+add a tuple:-
+
+# set of vowels
+vowels = {'a', 'e', 'u'}
+
+# a tuple ('i', 'o')
+tup = ('i', 'o')
+
+# adding tuple
+vowels.add(tup)
+print('Vowels are:', vowels)
+
+# adding same tuple again
+vowels.add(tup)
+print('Vowels are:', vowels)
+
+o/p:-
+Vowels are: {'a', 'e', 'u', ('i', 'o')}
+Vowels are: {'a', 'e', 'u', ('i', 'o')}
+------------------------------------------------------------
+ Remove all elements from a Python set using clear()
+
+# set of vowels
+vowels = {'a', 'e', 'i', 'o', 'u'}
+print('Vowels (before clear):', vowels)
+
+# clearing vowels
+vowels.clear()
+print('Vowels (after clear):', vowels)
+
+o/p:-
+Vowels (before clear): {'e', 'a', 'o', 'u', 'i'}
+Vowels (after clear): set()
+
+--------------------------------------------------------
+remove() Parameters
+The remove() method takes a single element as an argument and removes it from the set.
+
+If the element(argument) passed to the remove() method doesn't exist, keyError exception is thrown.
+
+# language set
+language = {'English', 'French', 'German'}
+
+# 'German' element is removed
+language.remove('German')
+
+# Updated language set
+print('Updated language set: ', language)
+
+o/p:-
+Updated language set:  {'English', 'French'}
+-------------------------------------------------------
+After each module the candidate have to undergo the assessment.
+
+https://captivateprime.adobe.com/ILS
+
+User ID  - email id of the candidate.
+
+Password is - Tech@123
+--------------------------------------------------------------
+string
+>>> str1 = "welcome"
+>>> str2 = "welcome"
+here str1  and str2  refers to the same string object "welcome"  which is stored somewhere in memory. You can test whether str1  refers to same object as str2  using id()  function.
+
+What is id()  : Every object in python is stored somewhere in memory. We can use id()  to get that memory address.
+
+>>> id(str1)
+78965411
+>>> id(str2)
+78965411
+>>> id(str1)
+78965411
+>>> id(str2)
+78965411
+
+------------------------------------------------------------
+ord() and chr() Functions
+------------------------------------------------
+ord() – function returns the ASCII code of the character.
+chr() – function returns character represented by a ASCII number.
+
+>>> ch = 'b'
+>>> ord(ch)
+98
+>>> chr(97)
+'a'
+>>> ord('A')
+65
+>>> ch = 'b'
+>>> ord(ch)
+98
+>>> chr(97)
+'a'
+>>> ord('A')
+65
+------------------------------------------
+String Functions in Python
+FUNCTION NAME	FUNCTION DESCRIPTION
+len()	returns length of the string
+max()	returns character having highest ASCII value
+min()	returns character having lowest ASCII value
+>>> len("hello")
+5
+>>> max("abc")
+'c'
+>>> min("abc")
+'a'
+
+>>> len("hello")
+5
+>>> max("abc")
+'c'
+>>> min("abc")
+'a'
+------------------------------------------------
+You can use in  and not in  operators to check existence of string in another string. They are also known as membership operator.
+
+>>> s1 = "Welcome"
+>>> "come" in s1
+True
+>>> "come" not in s1
+False
+>>> s1 = "Welcome"
+>>> "come" in s1
+True
+>>> "come" not in s1
+False
+>>>
+----------------------------------------------
+String comparison
+You can use ( > , < , <= , <= , == , !=  ) to compare two strings. Python compares using ASCII value of the characters.
+
+Suppose you have str1  as "Mary"  and str2  as "Mac" . The first two characters from str1  and str2 ( M  and M ) are compared. As they are equal, the second two characters are compared. Because they are also equal, the third two characters ( r  and c ) are compared. And because 'r'  has greater ASCII value than 'c' , str1  is greater than str2 .
+
+>>> "tim" == "tie"
+False
+>>> "free" != "freedom"
+True
+>>> "arrow" > "aron"
+True
+>>> "right" >= "left"
+True
+>>> "teeth" < "tee"
+False
+>>> "yellow" <= "fellow"
+False
+>>> "abc" > ""
+True
+>>>
+---------------------------------------
+Iterating string using for loop
+String is a sequence type and also iterable using for loop (to learn more about for loop click here).
+
+>>> s = "hello"
+>>> for i in s:
+...     print(i, end="")
+hello
+>>> s = "hello"
+>>> for i in s:
+...     print(i, end="")
+hello
+-------------------------------------------------
+By default print()  function prints string with a newline , we change this behavior by supplying a second argument to it as follows.
+
+print("my string", end="\n")  #this is default behavior
+print("my string", end="")    # print string without a newline
+print("my string", end="foo")  # now print() will print foo after every 			string
+-------------------------------------------
+METHOD NAME	 METHOD DESCRIPTION
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+isalnum()		Returns True if string is alphanumeric
+isalpha()		Returns True if string contains only alphabets
+isdigit()		Returns True if string contains only digits
+isidentifier()	Return True is string is valid identifier
+islower()		Returns True if string is in lowercase
+isupper()		Returns True if string is in uppercase
+isspace()		Returns True if string contains only whitespace
+
+------------------------------------
+>>> s = "welcome to python"
+>>> s.isalnum()
+False
+>>> "Welcome".isalpha()
+True
+>>> "2012".isdigit()
+True
+>>> "first Number".isidentifier()
+False
+>>> s.islower()
+True
+>>> "WELCOME".isupper()
+True
+>>> "  \t".isspace()
+True
+---------------------------------------------------------
+Searching for Substrings
+METHOD NAME	METHODS DESCRIPTION:
+endswith(s1: str): bool	  Returns True if strings ends with substring s1
+startswith(s1: str): bool  Returns True if strings starts with substring 			s1
+count(substring): int    Returns number of occurrences of substring 		the string
+find(s1): int	Returns lowest index from where s1 starts in 		the string, if string not found returns -1
+rfind(s1): int	Returns highest index from where s1 starts in 		the string, if string not found returns -1
+------------------------------------------------------------------------------------------------
+>>> s = "welcome to python"
+>>> s.endswith("thon")
+True
+>>> s.startswith("good")
+False
+>>> s.find("come")
+3
+>>> s.find("become")
+-1
+>>> s.rfind("o")
+15
+>>> s.count("o")
+3
+>>>
+
+>>> s = "welcome to python"
+>>> s.endswith("thon")
+True
+>>> s.startswith("good")
+False
+>>> s.find("come")
+3
+>>> s.find("become")
+-1
+>>> s.rfind("o")
+15
+>>> s.count("o")
+3
+>>>
+---------------------------------------------------
+Converting Strings
+METHOD NAME	METHOD DESCRIPTION
+capitalize(): str	Returns a copy of this string with only the first 		character capitalized.
+lower(): str		Return string by converting every character to 		lowercase
+upper(): str		Return string by converting every character to 		uppercase
+title(): str		This function return string by capitalizing first 		letter of every word in the string
+swapcase(): str	Return a string in which the lowercase letter is 		converted to uppercase and uppercase to 		lowercase
+replace(old, new): str	This function returns new string by replacing 		the occurrence of old string with new string
+s = "string in python"
+>>> s1 = s.capitalize()
+>>> s1
+'String in python'
+>>> s2 = s.title()
+>>> s2
+'String In Python'
+>>> s = "This Is Test"
+>>> s3 = s.lower()
+>>> s3
+'this is test'
+>>> s4 = s.upper()
+>>> s4
+'THIS IS TEST'
+>>> s5 = s.swapcase()
+>>> s5
+'tHIS iS tEST'
+>>> s6 = s.replace("Is", "Was")
+>>> s6
+'This Was Test'
+>>> s
+'This Is Test'
+>>>
+
+s = "string in python"
+>>> s1 = s.capitalize()
+>>> s1
+'String in python'
+>>> s2 = s.title()
+>>> s2
+'String In Python'
+>>> s = "This Is Test"
+>>> s3 = s.lower()
+>>> s3
+'this is test'
+>>> s4 = s.upper()
+>>> s4
+'THIS IS TEST'
+>>> s5 = s.swapcase()
+>>> s5
+'tHIS iS tEST'
+>>> s6 = s.replace("Is", "Was")
+>>> s6
+'This Was Test'
+>>> s
+'This Is Test'
+>>>
+----------------------------------------------------------------
