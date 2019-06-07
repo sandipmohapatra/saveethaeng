@@ -1,0 +1,145 @@
+Python dictionary is an unordered collection of items. A dictionary has a key: value pair.
+While values can be of any data type and can repeat, keys must be of immutable type (string, number or tuple with immutable elements) and must be unique.
+
+example 1:
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"GOOGLE"}  
+print(type(Employee))  
+print("printing Employee data .... ")  
+print(Employee)  
+-------------
+o/p:-
+<class 'dict'>
+printing Employee data .... 
+{'Age': 29, 'salary': 25000, 'Name': 'John', 'Company': 'GOOGLE'}
+
+------------------------------------------------------------
+example 2:
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"GOOGLE"}  
+print(type(Employee))  
+print("printing Employee data .... ")  
+print("Name : %s" %Employee["Name"])  
+print("Age : %d" %Employee["Age"])  
+print("Salary : %d" %Employee["salary"])  
+print("Company : %s" %Employee["Company"])  
+------------------------------------------------------
+o/p:-
+<class 'dict'>
+printing Employee data .... 
+Name : John
+Age : 29
+Salary : 25000
+Company : GOOGLE
+--------------------------------------------------------------
+example 3:-
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"GOOGLE"}  
+print(type(Employee))  
+print("printing Employee data .... ")  
+print(Employee)  
+print("Enter the details of the new employee....");  
+Employee["Name"] = input("Name: ");  
+Employee["Age"] = int(input("Age: "));  
+Employee["salary"] = int(input("Salary: "));  
+Employee["Company"] = input("Company:");  
+print("printing the new data");  
+print(Employee)  
+
+-----------------------------------------
+o/p:-
+<class 'dict'>
+printing Employee data .... 
+{'Name': 'John', 'salary': 25000, 'Company': 'GOOGLE', 'Age': 29}
+Enter the details of the new employee....
+Name: David
+Age: 19
+Salary: 8900
+Company:JTP
+printing the new data
+{'Name': 'David', 'salary': 8900, 'Company': 'JTP', 'Age': 19}
+
+-------------------------------------------------------
+example 4:-
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"GOOGLE"}  
+print(type(Employee))  
+print("printing Employee data .... ")  
+print(Employee)  
+print("Deleting some of the employee data")   
+del Employee["Name"]  
+del Employee["Company"]  
+print("printing the modified information ")  
+print(Employee)  
+print("Deleting the dictionary: Employee");  
+del Employee  
+print("Lets try to print it again ");  
+print(Employee)  
+--------------------------------------------------------
+o/p:-
+<class 'dict'>
+printing Employee data .... 
+{'Age': 29, 'Company': 'GOOGLE', 'Name': 'John', 'salary': 25000}
+Deleting some of the employee data
+printing the modified information 
+{'Age': 29, 'salary': 25000}
+Deleting the dictionary: Employee
+Lets try to print it again 
+Traceback (most recent call last):
+  File "list.py", line 13, in <module>
+    print(Employee)
+NameError: name 'Employee' is not defined
+---------------------------------------------------------------------
+example 5:-
+my_dict = {'name':'Jack', 'age': 26}
+
+# update value
+my_dict['age'] = 27
+
+#Output: {'age': 27, 'name': 'Jack'}
+print(my_dict)
+
+# add item
+my_dict['address'] = 'Downtown'  
+
+# Output: {'address': 'Downtown', 'age': 27, 'name': 'Jack'}
+print(my_dict)
+-----------------------------------
+o/p:-
+{'name': 'Jack', 'age': 27}
+{'name': 'Jack', 'age': 27, 'address': 'Downtown'}
+
+-----------------------------------------------------------------------
+example 6:-
+# create a dictionary
+squares = {1:1, 2:4, 3:9, 4:16, 5:25}
+
+# remove a particular item
+# Output: 16
+print(squares.pop(4))
+
+# Output: {1: 1, 2: 4, 3: 9, 5: 25}
+print(squares)
+
+# remove an arbitrary item
+# Output: (1, 1)
+print(squares.popitem())
+
+# Output: {2: 4, 3: 9, 5: 25}
+print(squares)
+
+# delete a particular item
+del squares[5]
+
+# Output: {2: 4, 3: 9}
+print(squares)
+
+# remove all items
+squares.clear()
+
+# Output: {}
+print(squares)
+
+# delete the dictionary itself
+del squares
+
+# Throws Error
+# print(squares)
