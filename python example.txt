@@ -1,0 +1,82 @@
+#wap to display a enter number is palindrome
+-----------------------------------------------------------
+n=int(input("Enter number:"))
+temp=n
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+if(temp==rev):
+    print("The number is a palindrome!")
+else:
+    print("The number isn't a palindrome!")
+
+-----------------------------------------------------------------
+#wap to display the year is leap or not
+
+year=int(input("Enter year to be checked:"))
+if(year%4==0 and year%100!=0 or year%400==0):
+    print("The year is a leap year!")
+else:
+    print("The year isn't a leap year!")
+--------------------------------------------------------
+#wap to find no of vowels in a given string
+
+string=str(input("Enter string:"))
+vowels=0
+for i in string:
+      if(i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U'):
+            vowels=vowels+1
+print("Number of vowels are:")
+print(vowels)
+------------------------------------------------------
+#wap using class and constructor find area of a rectangle
+
+class rectangle():
+    def __init__(self, breadth, length):
+        self.breadth = breadth
+        self.length = length
+
+    def area(self):
+        return self.breadth * self.length
+
+
+a = int(input("Enter length of rectangle: "))
+b = int(input("Enter breadth of rectangle: "))
+obj = rectangle(a, b)
+print("Area of rectangle:", obj.area())
+
+---------------------------------------------------------------------
+#wap to find area,perimeter of circle using class and constructor
+
+import math
+
+
+class circle():
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * (self.radius ** 2)
+
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+
+
+r = int(input("Enter radius of circle: "))
+obj = circle(r)
+print("Area of circle:", round(obj.area(), 2))
+print("Perimeter of circle:", round(obj.perimeter(), 2))
+--------------------------------------------------------------------------
+#wap to find fibonacci series of a given no..
+
+def fibonacci(n):
+    if(n <= 1):
+        return n
+    else:
+        return(fibonacci(n-1) + fibonacci(n-2))
+n = int(input("Enter number of terms:"))
+print("Fibonacci sequence:")
+for i in range(n):
+    print (fibonacci(i))
