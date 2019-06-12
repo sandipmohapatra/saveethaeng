@@ -225,3 +225,53 @@ d.display1()
 d.sum()
 d.average()
 d.studgrade()
+--------------------------------------------
+class Bank:
+    def getroi(self):
+        return 10;
+
+
+class SBI(Bank):
+    def getroi(self):
+        return 7;
+
+
+class ICICI(Bank):
+    def getroi(self):
+        return 8;
+
+
+b1 = Bank()
+b2 = SBI()
+b3 = ICICI()
+print("Bank Rate of interest:", b1.getroi());
+print("SBI Rate of interest:", b2.getroi());
+print("ICICI Rate of interest:", b3.getroi());
+----------------------------------------------------------------------
+class Calculation1:
+    def Summation(self,a,b):
+        return a+b;
+class Calculation2:
+    def Multiplication(self,a,b):
+        return a*b;
+class Derived(Calculation1,Calculation2):
+    def Divide(self,a,b):
+        return a/b;
+d = Derived()
+print(d.Summation(10,20))
+print(d.Multiplication(10,20))  
+print(d.Divide(10,20))
+--------------------------------------------------
+class Calculation1:
+    def Summation(self,a,b):
+        return a+b;
+class Calculation2:
+    def Multiplication(self,a,b):
+        return a*b;
+class Derived(Calculation1,Calculation2):
+    def Divide(self,a,b):
+        return a/b;
+d = Derived()  
+print(issubclass(Derived,Calculation2))
+print(issubclass(Calculation1,Calculation2))
+-------------------------------------------------------------------
