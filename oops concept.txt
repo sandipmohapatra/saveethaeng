@@ -7,10 +7,13 @@ Major principles of object-oriented programming system are :-
 Object
 Class
 Method
+constructor
 Inheritance
 Polymorphism
 Data Abstraction
 Encapsulation
+----------------------------------------------------------------
+
 Object
 The object is an entity that has state and behavior. It may be any real-world object like the mouse, keyboard, chair, table, pen, etc.
 
@@ -59,7 +62,7 @@ The syntax to create the instance of the class is given below.
 example :-
 
 class Employee:  
-    id = 10;  
+    id = 10  
     name = "John"
     address = "Bangalore"
     def display (x):  
@@ -126,8 +129,8 @@ class Student:
         print("This is non parametrized constructor")    
     def show(self,name):    
         print("Hello",name)    
-student = Student()    
-student.show("John")    
+stud = Student()    
+stud.show("John")    
 Output:
 
 This is non parametrized constructor
@@ -149,3 +152,76 @@ This is parametrized constructor
 Hello John
 
 ----------------------------------------------------------------
+class Animal:
+    def speak(self):
+        print("Animal Speaking")
+#child class Dog inherits the base class Animal
+class Dog(Animal):
+    def bark(self):
+        print("dog barking")
+d = Dog()
+d.bark()
+d.speak()
+-------------------------------------
+class student:
+    id = 10;
+    name = "sandip"
+    address = "bangalore"
+
+    def display(self):
+        print(self.id, self.name, self.address)
+class marks(student):
+    phy = 70;
+    chem = 60
+    math = 80
+    total=phy+chem+math
+    avg=total/3
+    def display1(self):
+        print(self.phy, self.chem, self.math)
+    def sum(self):
+        print("the total is ",self.total)
+    def average(self):
+        print("the average is ",self.avg)
+d = marks()
+d.display()
+d.display1()
+d.sum()
+d.average()
+---------------------------------------------------------------
+class student:
+    id = 10;
+    name = "sandip"
+    address = "bangalore"
+
+    def display(self):
+        print(self.id, self.name, self.address)
+class marks(student):
+    phy = 70;
+    chem = 60
+    math = 80
+    total=phy+chem+math
+    avg=total/3
+    def display1(self):
+        print(self.phy, self.chem, self.math)
+    def sum(self):
+        print("the total is ",self.total)
+    def average(self):
+        print("the average is ",self.avg)
+class grade(marks):
+    def studgrade(self):
+        if self.avg > 85 and self.avg <= 100:
+            print("Congrats ! you scored grade A ...")
+        elif self.avg > 60 and self.avg <= 85:
+            print("You scored grade B + ...")
+        elif self.avg > 40 and self.avg <= 60:
+            print("You scored grade B ...")
+        elif (self.avg > 30 and self.avg <= 40):
+            print("You scored grade C ...")
+        else:
+            print("Sorry you are fail ?")
+d = grade()
+d.display()
+d.display1()
+d.sum()
+d.average()
+d.studgrade()
