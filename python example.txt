@@ -162,6 +162,17 @@ print(a)
 print("Sum of items in list:")
 b=sum_arr(a,n)
 print(b)
+----------------------------------------------------------------------
+Enter the number of elements for list:3
+Enter element:5
+Enter element:7
+Enter element:9
+The list is:
+[5, 7, 9]
+Sum of items in list:
+21
+ex:-
+
 -------------------------------------------------------------
 #Python Program to sort a list according to the length of the string
 
@@ -182,3 +193,17 @@ if(string.find(sub_str)==-1):
 else:
       print("Substring in string!")
 -------------------------------------------------------------
+#wap to find capital letters and small letters from a string
+string=str(input("Enter string:"))
+count1=0
+count2=0
+for i in string:
+      if(i.islower()):
+            count1=count1+1
+      elif(i.isupper()):
+            count2=count2+1
+print("The number of lowercase characters is:")
+print(count1)
+print("The number of uppercase characters is:")
+print(count2)
+------------------------------------------------------------------------
