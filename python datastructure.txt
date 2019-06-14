@@ -26,3 +26,40 @@ else:
     print('{} was found at index {}.'.format(key, index))
 
 -----------------------------------------------------------------------------
+Binary search
+
+Problem Solution
+1. Create a function binary_search that takes a list and key as arguments.
+2. The variable start is set to 0 and end is set to the length of the list.
+3. The variable start keeps track of the first element in the part of the list being searched while end keeps track of the element one after the end of the part being searched.
+4. A while loop is created that iterates as long as start is less than end.
+5. mid is calculated as the floor of the average of start and end.
+6. If the element at index mid is less than key, start is set to mid + 1 and if it is more than key, end is set to mid. Otherwise, mid is returned as the index of the found element.
+7. If no such item is found, -1 is returned.
+
+---------
+def binary_search(alist, start, end, key):
+    """Search key in alist[start... end - 1]."""
+    if not start < end:
+        return -1
+
+    mid = (start + end) // 2
+    if alist[mid] < key:
+        return binary_search(alist, mid + 1, end, key)
+    elif alist[mid] > key:
+        return binary_search(alist, start, mid, key)
+    else:
+        return mid
+
+
+alist = input('Enter the sorted list of numbers: ')
+alist = alist.split()
+alist = [int(x) for x in alist]
+key = int(input('The number to search for: '))
+
+index = binary_search(alist, 0, len(alist), key)
+if index < 0:
+    print('{} was not found.'.format(key))
+else:
+    print('{} was found at index {}.'.format(key, index))
+-------------------------------------------
